@@ -1,12 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Nike Store</title>
 </head>
@@ -35,6 +34,36 @@
             <h3 class="menuItem">HIPPIE</h3>
         </div>
     </nav>
+
+    <div class="icons-login">
+        <div id="cartIcon" class="icons-login" onclick="toggleCart()">
+            <div class="cart-icon">
+                <div class="cart-icons"><img src="images/icon-cart.svg" alt="cart"></div>
+                <div class="whole-cart-window hide">
+                    <h3>Cart</h3>
+                    <div class="cart-wrapper">
+                        <!-- Cart items will be dynamically generated here -->
+                    </div>
+                    <div class="checkout">Checkout</div>
+                </div>
+            </div>
+        </div>
+        <div id="notificationsIcon" class="icons-login" onclick="toggleNotifications()">
+            <div class="notifications-icon">
+                <img src="images/icon-notifications.svg" alt="Notifications">
+                <div class="whole-notifications-window hide">
+                    <h3>Notifications</h3>
+                    <div class="notifications-wrapper">
+                        <!-- Notifications will be dynamically generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login">
+            <a href="#login"><img src="images/image-avatar.png" alt="Login"></a>
+        </div>
+    </div>
+
     <div class="slider">
         <div class="sliderWrapper">
             <div class="sliderItem">
@@ -84,7 +113,7 @@
             </div>
         </div>
     </div>
-   
+
     <div class="features">
         <div class="feature">
             <img src="./img/shipping.png" alt="" class="featureIcon">
@@ -114,8 +143,7 @@
             <h1 class="productTitle">AIR FORCE</h1>
             <h2 class="productPrice">$199</h2>
             <p class="productDesc">Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias assumenda
-                dolorum
-                doloremque sapiente aliquid aperiam.</p>
+                dolorum doloremque sapiente aliquid aperiam.</p>
             <div class="colors">
                 <div class="color"></div>
                 <div class="color"></div>
@@ -150,6 +178,7 @@
             <span class="close">X</span>
         </div>
     </div>
+
     <div class="gallery">
         <div class="galleryItem">
             <h1 class="galleryTitle">Be Yourself!</h1>
@@ -167,6 +196,7 @@
                 alt="" class="galleryImg">
         </div>
     </div>
+
     <div class="newSeason">
         <div class="nsItem">
             <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -185,6 +215,7 @@
                 alt="" class="nsImg">
         </div>
     </div>
+
     <footer>
         <div class="footerLeft">
             <div class="footerMenu">
@@ -200,9 +231,8 @@
             <div class="footerMenu">
                 <h1 class="fMenuTitle">Useful Links</h1>
                 <ul class="fList">
-                    <li class="fListItem"><a href = "about.html">Support</a></li>
+                    <li class="fListItem"><a href="about.html">Support</a></li>
                     <li class="fListItem">Refund</li>
-                    
                     <li class="fListItem">FAQ</li>
                     <li class="fListItem">Feedback</li>
                     <li class="fListItem">Stories</li>
@@ -241,7 +271,17 @@
             </div>
         </div>
     </footer>
-    <script src="./app.js"></script>
+
+    <script>
+        function toggleCart() {
+            document.querySelector('.whole-cart-window').classList.toggle('hide');
+        }
+
+        function toggleNotifications() {
+            document.querySelector('.whole-notifications-window').classList.toggle('hide');
+        }
+    </script>
 </body>
 
 </html>
+
